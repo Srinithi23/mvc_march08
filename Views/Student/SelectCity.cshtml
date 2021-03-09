@@ -1,0 +1,30 @@
+﻿@model mvc_demo.Models.Address
+@{
+    Layout = null;
+}
+
+<div>
+    @{
+        Html.RenderPartial("PartialView");
+    }
+</div>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectCity</title>
+</head>
+<body>
+    <div>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.DropDownListFor(m=>m.SelectedCity, new SelectList(Model.mycities, "Value", "Text"))
+            <input type = "submit" value="SelectCity"/>
+        }
+        </div>
+</body>
+</html>

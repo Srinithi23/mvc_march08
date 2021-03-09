@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AnotherPage</title>
+</head>
+<body>
+    <div>
+        <h2>
+            Its another page!!
+        </h2>
+
+        <div>
+            Student name: @ViewData["StudentName"]
+        </div>
+
+        <!-- Below html code is for view data -->
+        @*<div>
+            Numbers:
+            @foreach (var item in (IEnumerable<int>)( ViewData["numbers"]))
+            {
+                <p> @item  </p>
+            }
+        </div>*@
+
+
+        <!-- Below html code is for view bag -->
+        <div>
+            Numbers:
+            @foreach (var item in ViewBag.numbers)
+            {
+                <p> @item  </p>
+            }
+        </div>
+
+    </div>
+</body>
+</html>
